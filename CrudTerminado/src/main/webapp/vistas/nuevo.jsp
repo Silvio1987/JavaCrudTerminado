@@ -19,55 +19,52 @@
     </head>
     <body>
         
-        <div class="container" >
-            <h1 class="text-center" >Añadir Alumno</h1>
+        <%            	
+        String rutaPrincipal="SociosController";
+        %> 
+        
+        <a class="btn btn-primary m-4 " href=<%=rutaPrincipal%>> Volver a Socios </a>
+        
+        <div class="container ml-6" >
+            <h1 class="text-center" >Nuevo Socio</h1>
                 <div class="row" >
-                    <form class="p-4" method="POST" action="SociosController?accion=insert">
+                    <form class="form-group col-10 ml-6" method="POST" action="SociosController?accion=insert">
                         <div class="mb-2">
                             <label for="nombre" class="form-label" >Nombre</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre">                          
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Escribe tu nombre">                          
                         </div> 
                         <div class="mb-2">
                             <label for="apellido" class="form-label" >Apellido</label>
-                            <input type="text" class="form-control" id="apellido" name="apellido">                          
+                            <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Escribe tu apellido">                          
                         </div> 
                          <div class="mb-2">
                             <label for="direccion" class="form-label" >Direccion</label>
-                            <input type="text" class="form-control" id="direccion" name="direccion">                          
+                            <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Escriba su direccion">                          
                         </div> 
                          <div class="mb-2">
                             <label for="localidad" class="form-label" >Localidad</label>
-                            <input type="text" class="form-control" id="localidad" name="localidad">                          
+                            <input type="text" class="form-control" id="localidad" name="localidad" placeholder="Ingrese su localidad">                          
                         </div> 
                           <div class="mb-2">
-                            <label for="fnac" class="form-label" >Fecha Nac</label>
+                            <label for="fnac" class="form-label" >Fecha de nacimiento</label>
                             <input type="date" class="form-control" id="fnac" name="fnac">                          
                         </div> 
                         <div class="mb-2">
                             <label for="mail" class="form-label" >E-Mail</label>
-                            <input type="text" class="form-control" id="mail" name="mail">                          
+                            <input type="text" class="form-control" id="mail" name="mail" placeholder="ingrese su email">                          
                         </div>  
                         <div class="mb-2">
                             <label for="telefono" class="form-label" >Telefono</label>
-                            <input type="text" class="form-control" id="telefono" name="telefono">                          
+                            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Ingrese un telefono">                          
                         </div>                
                                                
                         <button type="submit" class="btn btn-primary" >Añadir </button>
                         
                     </form>                
                 </div>
-            
-            
-            
-            
-            
-            
-            
+                
         </div>
-        
-        
-        
-        
+
         
         
         

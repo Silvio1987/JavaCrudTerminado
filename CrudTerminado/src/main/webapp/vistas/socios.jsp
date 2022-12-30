@@ -25,7 +25,8 @@
 
     </head>
     <body>
-        <h1>Listado de Socios del Gym</h1>
+        
+        <h1 class="text-center">Listado de Socios del Gym</h1>
         
         
         <div class="container">
@@ -43,7 +44,7 @@
                              <th>Telefono</th>
                              <th>mail</th>
                              <th>Modificar</th>
-                             <th>Eliminar</th>
+                             <th><i class="fa-solid fa-trash"></i>Eliminar</th>
                     </thead>
                     
                     <%
@@ -51,11 +52,11 @@
                     SociosDAO s1=new SociosDAO();
                     resultado=s1.listarSocios();
                     
-                                for(int i=0;i<resultado.size();i++)
+                    for(int i=0;i<resultado.size();i++)
 				{
-				String ruta="SociosController?accion=modificar&id="+resultado.get(i).getIdSocio();	
-				String rutaE="SociosController?accion=eliminar&id="+resultado.get(i).getIdSocio();
-				%>                
+                    String ruta="SociosController?accion=modificar&id="+resultado.get(i).getIdSocio();	
+                    String rutaE="SociosController?accion=eliminar&id="+resultado.get(i).getIdSocio();
+                    %>                
                     
                 
                     <tr>
@@ -67,8 +68,8 @@
                          <td><%=resultado.get(i).getFnac()%></td>
                          <td><%=resultado.get(i).getTelefono()%></td>
                          <td><%=resultado.get(i).getMail()%></td>
-                         <td class="text-center"><a href=<%=ruta%>> <i class="fa-solid fa-arrow-right-arrow-left"></i> </a></td>
-			 <td class="text-center"><a href=<%=rutaE%>><i class="fa-solid fa-arrow-down"></i> </a></td>
+                         <td class="text-center"><a href=<%=ruta%>> <i class="fa-solid fa-pen"></i> </a></td>
+			 <td class="text-center"><a href=<%=rutaE%>> <i class="fa-solid fa-trash"></i> </a></td>
                     </tr>
                     <%
                         }
